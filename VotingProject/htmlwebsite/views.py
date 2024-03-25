@@ -22,3 +22,9 @@ def LoginPage(request):
 
 def LogoutPage(request):
     return redirect('login')
+
+def VotePage(request):
+    return render (request,'vote.html')
+
+def ResultPage(request):
+    return render (request,'results.html')

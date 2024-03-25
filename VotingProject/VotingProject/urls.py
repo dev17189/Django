@@ -23,6 +23,8 @@ urlpatterns = [
     path('login/',views.LoginPage,name='login'),
     path('home/',views.HomePage,name='home'),
     path('logout/',views.LogoutPage,name='logout'),
+    path('vote',views.VotePage,name='vote'),
+    path('result',views.ResultPage,name='result'),
 
 
     
