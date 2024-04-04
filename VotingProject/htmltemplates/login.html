@@ -141,12 +141,20 @@ button{
     </div>
     <form method="post">
         <h3>Login Here</h3>
+        {% if messages %}
+        {{ message.tags }}
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+          </div>
+    {% endif %}
         {% csrf_token %} 
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username" id="username" name="username">
+        <input type="text" placeholder="Enter Username" id="username" name="username" required>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="pass">
+        <input type="password" placeholder="Password" id="password" name="pass" required>
 
         <button type="submit">Log In</button>
         <!-- <input type="button" value=""> -->

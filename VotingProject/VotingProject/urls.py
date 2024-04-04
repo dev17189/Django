@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from htmlwebsite import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.SignupPage,name='signup'),
@@ -25,7 +26,6 @@ urlpatterns = [
     path('logout/',views.LogoutPage,name='logout'),
     path('vote',views.VotePage,name='vote'),
     path('result',views.ResultPage,name='result'),
-
-
-    
+    path('candidate',views.Candidate_reg,name='candidate'),
+    path('update_rec/<id>/',views.vote, name="update_rec"),
 ]
